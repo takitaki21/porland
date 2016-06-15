@@ -43,8 +43,7 @@ int clac(char *c){
 			b=pop();
 			if (a==0)
 				break;
-
-			push(b/a);
+            push(b/a);
 			break;
 
 			case '=': printf("%d\n",pop() );
