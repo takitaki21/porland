@@ -59,7 +59,7 @@
 		}
 		
 		
-		int main(){
+ int main(){
 	char c[100];		
 	scanf("%s",*c);
 	printf("%d\n", clac(c) );
