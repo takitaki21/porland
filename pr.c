@@ -1,4 +1,5 @@
 	#include <stdio.h>
+
 int stack[100];
 int a,b,i,p,w;
 char c[100];
