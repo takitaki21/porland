@@ -1,7 +1,7 @@
 	#include <stdio.h>
 
 		int stack[100];
-		int p,i,n;
+		int p,i;
 		int a,b;
 		char c[100];
 
