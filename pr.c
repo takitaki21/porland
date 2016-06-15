@@ -1,7 +1,6 @@
 	#include <stdio.h>
 int stack[100];
-int p,i;
-int a,b;
+int a,b,i,p,w;
 char c[100];
 
 void push(int i){
@@ -17,9 +16,13 @@ int pop() {
 	return(i);
 }
 
-int clac(char *c){ 
-	while(*c){
-		switch (*c) { 
+int main(){ 
+	stack = 0;
+
+
+	while(1){
+		switch (stack.charAt(i)) { 
+
 			case '+':
 			a=pop();
 			b=pop();
@@ -46,20 +49,11 @@ int clac(char *c){
             push(b/a);
 			break;
 
-			case '=': printf("%d\n",pop() );
-			return 0;
-
-			default : push(atoi(c));
+			default : 
 			break;
-		}	 
-		c++;      
+		}	      
 	}
 	return pop();
 }
 
 
-int main(){
-	char c[100];		
-	scanf("%s",*c);
-	printf("%d\n", clac(c) );
-}
