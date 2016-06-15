@@ -1,6 +1,5 @@
 	#include <stdio.h>
-
-		int stack[100];
+        int stack[100];
 		int p,i;
 		int a,b;
 		char c[100];
@@ -20,8 +19,7 @@
 
 		int clac(char *c){ 
 		  	while(*c){
-		  		
-	           	 switch (*c) { 
+		  		 switch (*c) { 
 		             case '+':
 		                  a=pop();
 		                  b=pop();
@@ -54,11 +52,12 @@
 
 		              default : push(atoi(c));
 		              break;
-		      }	 
+		            }	 
 		      c++;      
 		    }
 		    return pop();
 		}
+		
 		
 		int main(){
 	char c[100];		
