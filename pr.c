@@ -8,7 +8,6 @@ void push(int i){
 	stack[p++]=i;
 	i++;
 }
-
 int pop() {
 	int i;
 	p--;
