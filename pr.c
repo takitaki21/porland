@@ -1,9 +1,10 @@
-	#include <stdio.h>
+#include <stdio.h>
+
 
 int stack[100];
 int a=0,b=0;
-int p;
-char c[100];
+int p,i;
+
 
 void push(int i){
 	stack[p++]=i;
@@ -17,15 +18,16 @@ int pop() {
 	return(i);
 }
 
-int main(void){
-scanf("%d",c);
-printf("output:%d\n",clac(c));
-return 0;
-}
 
-int clac(char c[]){
+
+
+
+int main(){
+	char buf[5];
+	int  n;
 	while(1){
-		switch(){ 
+		scanf("%s",n);
+		switch(n){ 
 
 			case '+':
 			a=pop();
@@ -55,6 +57,8 @@ int clac(char c[]){
 
             push(b/a);
 			break;
+			printf("output:%s\n",pop());
+return 0;
 		}
 		}	      
 	}
