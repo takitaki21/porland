@@ -1,68 +1,60 @@
 #include <stdio.h>
-
-
+#include <string.h>
 int stack[100];
-int a=0,b=0;
-int p,i;
+int p=0;
 
 
-void push(int i){
-	stack[p++]=i;
-	i++;
+void push(int h , int buff){
+	stack[h]=buff;
 }
 int pop() {
-	int i;
-	p--;
-	i=stack[p-1];
-
-	return(i);
+    return stack[--p];
 }
 
-
-
-
-
 int main(){
-	char buf[5];
-	int  n;
-	while(1){
-		scanf("%s",n);
-		switch(n){ 
+	int h = 0;	
+	int a=0,b=0 ;
+	char c[100];
+	scanf("%s",c);
+	while(h < strlen(c)){
+		switch(c[h]){ 
 
 			case '+':
 			a=pop();
 			b=pop();
-			push(b+a);
+			push(0,b+a);
+			p=1;
 			break;
 
 			case '-':
 			a=pop();
 			b=pop();
-			push(b-a);
+			push(0,b-a);
+			p=1;
 			break;
 
 			case '*':
 			a=pop();
 			b=pop();
-			push(b*a);
+			push(0,b*a);
+			p=1;
 			break;
 
 			case '/':
 			a=pop();
 			b=pop();
-			if  (a==0)
-				break;
-		
-			else{
-
-            push(b/a);
+            push(0,b/a);
+            p=1;
 			break;
-			printf("output:%s\n",pop());
-return 0;
+
+			default :
+			push(p++,(int)c[h]-'0');
+		 break;
 		}
-		}	      
+		h++;
 	}
-	return pop();
-}
+	printf("%d\n",stack[0]);	      
+	}
+
 
 
